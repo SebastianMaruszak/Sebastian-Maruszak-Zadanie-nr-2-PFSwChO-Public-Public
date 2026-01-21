@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testphp
+  name: brilliantapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: testphp
+      app: brilliantapp
   template:
     metadata:
       labels:
-        app: testphp
+        app: brilliantapp
     spec:
       containers:
         - name: apache
-          image: testphp:1.0
+          image: brilliantapp:1.0
           imagePullPolicy: Never
           ports:
             - containerPort: 80
