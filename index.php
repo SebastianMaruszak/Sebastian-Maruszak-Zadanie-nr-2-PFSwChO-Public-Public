@@ -1,9 +1,14 @@
 <?php
-$conn = new mysqli("mysql", "appuser", "apppass", "appdb");
+$conn = new mysqli(
+    getenv("DB_HOST"),
+    getenv("DB_USER"),
+    getenv("DB_PASS"),
+    getenv("DB_NAME")
+);
 
 if ($conn->connect_error) {
     die("DB ERROR: " . $conn->connect_error);
 }
 
 echo "<h1>Brilliant App 🚀</h1>";
-echo "<p>Połączenie z MySQL OK</p>";
+echo "<p>ConfigMap + Secret OK</p>";
