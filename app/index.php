@@ -24,17 +24,26 @@ $statuses = ['todo' => 'To Do', 'inprogress' => 'In Progress', 'done' => 'Done']
         <?php foreach($tasks as $task): ?>
             <?php if($task['status'] == $key): ?>
                 <div class="task">
-                    <?= htmlspecialchars($task['title']) ?>
-                    <form method="post" action="move_task.php" style="display:inline;">
-                        <input type="hidden" name="id" value="<?= $task['id'] ?>">
-                        <select name="status">
-                            <?php foreach($statuses as $s_key => $s_label): ?>
-                                <option value="<?= $s_key ?>" <?= $task['status']==$s_key?'selected':'' ?>><?= $s_label ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                        <button>Move</button>
-                    </form>
-                </div>
+            <?= htmlspecialchars($task['title']) ?>
+            
+            <!-- Move task -->
+            <form method="post" action="move_task.php" style="display:inline;">
+                <input type="hidden" name="id" value="<?= $task['id'] ?>">
+                <select name="status">
+                    <?php foreach($statuses as $s_key => $s_label): ?>
+                        <option value="<?= $s_key ?>" <?= $task['status']==$s_key?'selected':'' ?>><?= $s_label ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <button>Move</button>
+            </form>
+
+            <!-- Delete task -->
+            <form method="post" action="delete_task.php" style="display:inline;">
+                <input type="hidden" name="id" value="<?= $task['id'] ?>">
+                <button>Delete</button>
+            </form>
+        </div>
+
             <?php endif; ?>
         <?php endforeach; ?>
         <form method="post" action="add_task.php">
