@@ -89,8 +89,9 @@ kubectl get pods
 minikube service apache
 ```
 
+![Kanban 1.0](<img width="1312" height="360" alt="png1" src="https://github.com/user-attachments/assets/dab6f62d-bcd6-4e17-9329-16b2e5ee44e7" />)
 
-![Kanban 1.0](images/png1.png)
+
 <br/><br/>
 
 # 🔧 Konfiguracja bazy danych
@@ -191,7 +192,8 @@ W ramach aktualizacji aplikacji Kanban (Apache + PHP) wprowadzono następujące 
 - Dodano informację o wersji aplikacji w ciele strony:
   **„Kanban Board 2.0 UPDATE”**
 
-![Kanban 2.0](images/png2.png)
+![Kanban 2.0](<img width="1290" height="351" alt="png2" src="https://github.com/user-attachments/assets/be415c2e-e521-4755-bf77-7acc107cabdb" />
+)
 
 Zmiana umożliwia jednoznaczną weryfikację, że nowa wersja aplikacji została poprawnie wdrożona.
 
