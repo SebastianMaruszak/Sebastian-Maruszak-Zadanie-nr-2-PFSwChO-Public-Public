@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS kanban;
+
+CREATE USER IF NOT EXISTS 'kanban_user'@'%' IDENTIFIED BY 'kanban_pass';
+GRANT ALL PRIVILEGES ON kanban.* TO 'kanban_user'@'%';
+FLUSH PRIVILEGES;
+
+USE kanban;
+
+CREATE TABLE IF NOT EXISTS tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    status ENUM('todo','inprogress','done') DEFAULT 'todo',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
