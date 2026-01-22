@@ -136,7 +136,7 @@ kubectl get pods -n kube-system
 ```
 ### 2️⃣ Dodać wpis w `/etc/hosts`
 ```
-192.168.49.2  brilliantapp.zad
+<minikube_ip> brilliantapp.zad
 ```
 ### 4️⃣ Zastosowanie Ingress
 ```bash
