@@ -16,7 +16,7 @@ $statuses = ['todo' => 'To Do', 'inprogress' => 'In Progress', 'done' => 'Done']
     </style>
 </head>
 <body>
-<h1>Kanban Board</h1>
+<h1>Kanban Board 2.0 UPDATE</h1>
 <div class="board">
 <?php foreach($statuses as $key => $label): ?>
     <div class="column">
