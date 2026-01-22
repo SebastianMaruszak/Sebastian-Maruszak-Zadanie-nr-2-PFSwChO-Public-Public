@@ -15,6 +15,6 @@ spec:
       containers:
       - name: apache
         image: kanban-app:latest
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
